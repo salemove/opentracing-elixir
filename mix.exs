@@ -1,4 +1,4 @@
-defmodule Opentracing.MixProject do
+defmodule OpenTracing.MixProject do
   use Mix.Project
 
   def project do

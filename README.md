@@ -1,11 +1,8 @@
-# Opentracing
-
-**TODO: Add description**
+# OpenTracing
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `opentracing` to your list of dependencies in `mix.exs`:
+Add `opentracing` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
