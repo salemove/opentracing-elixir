@@ -9,7 +9,8 @@ defmodule OpenTracing.MixProject do
       description: "OpenTracing API for Elixir",
       package: package(),
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      aliases: aliases()
     ]
   end
 
@@ -35,6 +36,19 @@ defmodule OpenTracing.MixProject do
     [
       # Build documentation (run `mix docs`)
       {:ex_doc, "~> 0.18.0", only: [:dev, :test], runtime: false}
+
+      # Code linter
+      {:credo, "~> 0.9", only: [:dev], runtime: false},
+
+      # Static type checking tool
+      {:dialyxir, "~> 0.5", only: [:dev], runtime: false}
+    ]
+  end
+
+  defp aliases() do
+    [
+      coverage: ["test --cover"],
+      lint: ["compile", "credo", "dialyzer --halt-exit-status"]
     ]
   end
 end
